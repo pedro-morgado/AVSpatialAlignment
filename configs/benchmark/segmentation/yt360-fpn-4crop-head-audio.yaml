@@ -1,0 +1,65 @@
+resume: false
+test_only: false
+seed: 0
+num_workers: 10
+
+benchmark: "yt360-fpn-4crop-head-audio"
+
+dataset:
+  name: "yt360"
+  full_res: false
+  fold: 1
+  sampling: 'video'   # video, clip
+  batch_size: 20
+  video_clip_duration: 0.5
+  video_fps: 16.
+  crop_size: 112
+  audio_input: "ambix"
+  audio_clip_duration: 1.
+  audio_fps: 24000
+  spectrogram_fps: 100.
+  n_fft: 512
+  n_mels: 128
+  augm_per_clip: 4
+  use_temporal_augm: false
+  use_spatial_augm: true
+  crop_method: 'random'
+  return_pos: true
+  horizon_only: false
+  crop_margin: 0.2
+  train:
+    subset: 'train'
+    mode: "clip"
+    use_augmentation: true
+    drop_last: true
+    clips_per_video: 1
+    hfov_lims: [0.15, 0.30]
+  test:
+    subset: 'test'
+    mode: "clip"
+    clips_per_video: 1
+    use_augmentation: true
+    drop_last: false
+    hfov_lims: [0.25, 0.25]
+
+optimizer:
+  name: "adam"
+  num_epochs: 10
+  weight_decay: 0.0005
+  head_only: true
+  lr:
+    name: "multistep"
+    base_lr: 0.0001
+    gamma: 0.1
+    milestones: [5, 8]
+
+model:
+  name: "fpn-ctx"
+  scratch: false
+  args:
+    num_classes: 32
+    fpn_dim: 256
+    segm_dim: 128
+    use_audio: true
+    use_context: false
+

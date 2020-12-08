@@ -1,0 +1,76 @@
+resume: true
+num_workers: 16
+
+log2tb: true
+seed: 0
+distributed: false
+print_freq: 100
+
+dataset:
+  name: "yt360"
+  full_res: false
+  sampling: 'video'   # video, clip
+  batch_size: 112
+  video_clip_duration: 0.5
+  video_fps: 16.
+  crop_size: 112
+  audio_clip_duration: 1.
+  audio_input: "ambix"
+  audio_fps: 24000
+  spectrogram_fps: 100.
+  n_fft: 512
+  n_mels: 128
+  augm_per_clip: 1
+  use_temporal_augm: false
+  use_spatial_augm: true
+  crop_method: 'random'
+  return_pos: true
+  horizon_only: false
+  crop_margin: 0.2
+  hfov_lims: [0.0707, 0.25]
+  train:
+    subset: 'train'
+    use_augmentation: true
+    drop_last: true
+    clips_per_video: 2
+  test:
+    subset: 'test'
+    use_augmentation: false
+    drop_last: false
+    clips_per_video: 1
+
+optimizer:
+  name: "adam"
+  weight_decay: 0.00001
+  num_epochs: 100
+  lr:
+    name: "multistep"
+    base_lr: 0.0001
+    gamma: 1.0
+    milestones: [50]
+
+loss:
+  name: "MultiTask"
+  args:
+    losses:
+      - name: "ContrastiveLoss"
+        args:
+          target: "cross-modal"
+          temperature: 0.07
+          normalize: true
+          proj_dim: [128]
+        coeff: 1.0
+
+model:
+  name: "CrossInstDisc"
+  model_dir: "checkpoints/AVSA/YT360/R2Plus1D-D18-S112"
+  arch: "av_wrapper"
+  args:
+    proj_dim: null
+    video_backbone: "R2Plus1D"
+    video_backbone_args:
+      depth: 18
+    audio_backbone: "Conv2D"
+    audio_backbone_args:
+      depth: 10
+      inp_channels: 4
