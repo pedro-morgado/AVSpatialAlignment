@@ -315,9 +315,7 @@ def build_video_dataset(db_cfg, split_cfg):
             normalize=True)
     ]
 
-    if db_cfg['name'] == 'kinetics':
-        dataset = datasets.Kinetics
-    elif db_cfg['name'] == 'ucf-101':
+    if db_cfg['name'] == 'ucf-101':
         dataset = datasets.UCF
     elif db_cfg['name'] == 'hmdb':
         dataset = datasets.HMDB

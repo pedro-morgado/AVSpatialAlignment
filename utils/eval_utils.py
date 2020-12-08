@@ -245,8 +245,6 @@ def build_dataloader(db_cfg, split_cfg, num_workers, distributed):
         dataset = datasets.UCF
     elif db_cfg['name'] == 'hmdb51':
         dataset = datasets.HMDB
-    elif db_cfg['name'] == 'kinetics':
-        dataset = datasets.Kinetics
     else:
         raise ValueError('Unknown dataset')
 
