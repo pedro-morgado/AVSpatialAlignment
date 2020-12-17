@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport (controls what to show when a link is posted online, like facebook chats, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" content="IE=edge, chrome=1">
+    <meta property="og:title" content="Your title here">
+    <meta property="og:image" content="Thumbnail image here">
+    <meta property="og:description" content="Small project description here">
+    <meta property="og:url" content="Link">
+    <meta property="og:type" content="website" />
+
+    <!-- Bootstrap core CSS -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+
+    <!-- Custom fonts for this template -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/academicons.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+
+    <style type="text/css">
+      .no-gutters>.col {
+        padding: 10px !important;
+      }
+    </style>
+
+    <!-- Resize videos -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $(".exampleVideo").height($(".exampleVideo").width() * 0.56)
+      })
+    </script>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a href="http://www.svcl.ucsd.edu" class="navbar-brand js-scroll-trigger my-0"><img src="assets/svcl_logo.png"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#overview">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container align-items-center my-auto">
+      <section id="overview">
+      <!--   Overview section   -->
+      <div class="row justify-content-center align-items-center mt-5">
+
+        <!-- Title-->
+        <div class="col-12 mx-auto text-center mt-5">
+          <h1 class="section-heading mb-2">Youtube-360</h1>
+          <h3 class="title">A dataset of uncurated 360 video content with spatial audio.</h3>
+        </div>
+
+        <!-- Video-->
+        <div class="col-12 text-center mt-2">
+          <video class="d-block img-thumbnail" width="100%" autoplay loop>
+            <source src="img/YT360.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Numbers -->
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-2 col-6 text-center">
+            <div class="mt-5 mx-auto">
+              <i class="fas fa-3x fa-vr-cardboard mb-3"></i>
+              <!-- <i class="fa fa-2x fa-film mb-3 "></i> -->
+              <h3 class="mb-1">Spatial Media</h3>
+              <p>360 video+FOA</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-6 text-center">
+            <div class="mt-5 mx-auto">
+              <i class="fa fa-3x fa-film mb-3 "></i>
+              <h3 class="mb-1">+88000 Clips</h3>
+              <p>(10s each)</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-6 text-center">
+            <div class="mt-5 mx-auto">
+              <i class="far fa-3x fa-clock mb-3"></i>
+              <h3 class="mb-1">246 Hours</h3>
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description-->
+        <div class="col-12 mx-auto pt-4">
+          <p class="text-justify">We collected a dataset of 360◦ video with first order ambisonics from YouTube, containing clips from a diverse set of topics such as musical performances, vlogs, sports, and others. The dataset was cleaned  by removing videos that 1) did not contain valid ambisonics, 2) only contain still images, or 3) contain a significant amount of post-production sounds such as voice-overs and background music. To evaluate a model's ability to localize objects in a 360 scene, we also provide semantic segmentation predictions provided by a state-of-the-art ResNet101 Panoptic FPN model trained on the MS-COCO dataset. For more information about the dataset, please check our paper.</p>
+
+          <p>
+            <b>Learning Representations from Audio-Visual Spatial Alignment</b><br>
+            <a href="http://www.svcl.ucsd.edu/~morgado" target="_blank">Pedro Morgado</a>&#42;, 
+            <a href="http://www.svcl.ucsd.edu/people/yili/" target="_blank">Yi Li</a>&#42;, 
+            <a href="http://www.svcl.ucsd.edu/~nuno" target="_blank">Nuno Vasconcelos</a><br>
+            <i>Advances in Neural Information Processing Systems (NeurIPS), 2020.</i><br>
+            [
+            <a class="button button-pdf" href="http://www.svcl.ucsd.edu/~morgado/publications/2020-sptalign/paper.pdf" target="_blank">PDF</a> | 
+            <a class="button button-suppl" href="https://pedro-morgado.github.io/assets/publications/2020-sptalign/suppl.pdf" target="_blank">Suppl</a> | 
+            <a class="button button-arxiv" href="https://arxiv.org/abs/2011.01819" target="_blank">ArXiv</a> | 
+            <a class="button button-code" href="https://github.com/pedro-morgado/AVSpatialAlignment" target="_blank">Code</a> |
+            <a href="http://www.svcl.ucsd.edu/~morgado/publications/2020-sptalign/ref.txt">BibTeX</a> |
+            <a class="button button-video" href="https://youtu.be/E77nkQs1RMc" target="_blank">Video</a>
+            ]</p>
+        </div>
+      </div>
+      </section>
+
+
+      <section id="download">
+        <div class="row justify-content-left">
+          <div class="col-12 mx-auto mb-5">
+            <h1 class="section-heading">Download</h1>
+            <p>We provide Youtube URLs and segment timestamps. If you want to download our pre-extracted segmentation maps or experience issues downloading and processing the dataset, please email the authors for assistance.</p>
+
+            <a href="https://raw.githubusercontent.com/pedro-morgado/AVSpatialAlignment/main/datasets/assets/yt360/train.txt" target="_blank">
+              <h4><i class="fas fa-cloud-download-alt mr-2"></i>Training set (IDs)</h4>
+            </a>
+            <a href="https://raw.githubusercontent.com/pedro-morgado/AVSpatialAlignment/main/datasets/assets/yt360/test.txt" target="_blank">
+              <h4><i class="fas fa-cloud-download-alt mr-2"></i>Test set (IDs)</h4>
+            </a>
+            <a href="https://raw.githubusercontent.com/pedro-morgado/AVSpatialAlignment/main/datasets/assets/yt360/segments.txt" target="_blank">
+              <h4><i class="fas fa-cloud-download-alt mr-2"></i>Segments</h4>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="ack">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 mx-auto">
+            <h2 class="section-heading">Acknowledgements</h3>
+            <p class="text-faded text-justify">This work was partially funded by NSF award IIS-1924937 and NVIDIA GPU donations. We also acknowledge and thank the use of the Nautilus platform for some of the experiments in paper.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </body>
+
+</html>
