@@ -22,11 +22,6 @@ The pre-extracted segmentation maps can be downloaded from [here](https://nextcl
 
 If you experience issues downloading or processing the dataset, please email the authors at {[pmaravil](mailto:pmaravil@eng.ucsd.edu), [yil898](mailto:yil898@eng.ucsd.edu)}@eng.ucsd.edu for assistance.
 
-### UCF, HMDB
-
-[UCF](https://www.crcv.ucf.edu/data/UCF101.php) and [HMDB](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) datasets should be downloaded from their respective websites and processed under `data/ucf101/` and `data/hmdb/` respectively.
-
-
 ## Self-supervised training
 
 ```
