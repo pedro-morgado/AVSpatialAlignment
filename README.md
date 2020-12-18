@@ -12,13 +12,13 @@ Requirements listed in `environment.yml`.
 
 ## Data preparation
 
-### YT-360 dataset
+### [YT-360 dataset](https://pedro-morgado.github.io/AVSpatialAlignment/)
 
-YouTube id's of videos in the YT-360 dataset are provided in `datasets/assets/yt360/[train|test].txt`. 
-Please, use your favorite YouTube dataset downloader to download the videos (e.g.~[link](https://github.com/rocksyne/kinetics-dataset-downloader)), and split them into 10s clips. The starting time of the segments used in the paper are provided in `datasets/assets/yt360/segments.txt`.
-After processing the dataset should be stored in `data/yt360/video` and `data/yt360/audio`. Filenames should have the format `{YOUTUBE_ID}-{SEGMENT_START_TIME}.{EXTENSION}`.
- 
-The pre-extracted segmentation maps can be downloaded from [here](http://www.svcl.ucsd.edu/projects/AVSpatialAlignment/yt360-segm.tar.gz) and extracted to `data/yt360/segmentation/`. 
+YouTube id's of videos in the YT-360 dataset are provided in `datasets/assets/yt360/[train|test].txt`, and segment timestamps in `datasets/assets/yt360/segments.txt`.
+Please, use your favorite YouTube dataset downloader to download the videos (e.g.~[link](https://github.com/rocksyne/kinetics-dataset-downloader)), and split them into 10s clips. 
+The dataset should be stored in `data/yt360/video` and `data/yt360/audio` with filenames `{YOUTUBE_ID}-{SEGMENT_START_TIME}.{EXTENSION}`.
+
+The pre-extracted segmentation maps can be downloaded from [here](https://nextcloud.nautilus.optiputer.net/s/zYisGXab9EJPtFB) and extracted to `data/yt360/segmentation/`. 
 
 If you experience issues downloading or processing the dataset, please email the authors at {[pmaravil](mailto:pmaravil@eng.ucsd.edu), [yil898](mailto:yil898@eng.ucsd.edu)}@eng.ucsd.edu for assistance.
 
