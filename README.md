@@ -22,6 +22,9 @@ The pre-extracted segmentation maps can be downloaded from [here](https://nextcl
 
 If you experience issues downloading or processing the dataset, please email the authors at {[pmaravil](mailto:pmaravil@eng.ucsd.edu), [yil898](mailto:yil898@eng.ucsd.edu)}@eng.ucsd.edu for assistance.
 
+## Pre-trained model
+The AVSA model that yield the top performance (trained from `configs/main/avsa/Cur-Loc4-TransfD2.yaml`) is available [here](https://nextcloud.nautilus.optiputer.net/s/T9SD8xn2pCHHCKG).
+
 ## Self-supervised training
 
 ```
