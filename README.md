@@ -18,12 +18,12 @@ YouTube id's of videos in the YT-360 dataset are provided in `datasets/assets/yt
 Please, use your favorite YouTube dataset downloader to download the videos (e.g.~[link](https://github.com/rocksyne/kinetics-dataset-downloader)), and split them into 10s clips. 
 The dataset should be stored in `data/yt360/video` and `data/yt360/audio` with filenames `{YOUTUBE_ID}-{SEGMENT_START_TIME}.{EXTENSION}`.
 
-The pre-extracted segmentation maps can be downloaded from [here](https://nextcloud.nautilus.optiputer.net/s/zYisGXab9EJPtFB) and extracted to `data/yt360/segmentation/`. 
+The pre-extracted segmentation maps can be downloaded from [here](https://nextcloud.nrp-nautilus.io/s/zYisGXab9EJPtFB) and extracted to `data/yt360/segmentation/`. 
 
 If you experience issues downloading or processing the dataset, please email the authors at {[pmaravil](mailto:pmaravil@eng.ucsd.edu), [yil898](mailto:yil898@eng.ucsd.edu)}@eng.ucsd.edu for assistance.
 
 ## Pre-trained model
-The AVSA model that yield the top performance (trained from `configs/main/avsa/Cur-Loc4-TransfD2.yaml`) is available [here](https://nextcloud.nautilus.optiputer.net/s/T9SD8xn2pCHHCKG).
+The AVSA model that yield the top performance (trained from `configs/main/avsa/Cur-Loc4-TransfD2.yaml`) is available [here](https://nextcloud.nrp-nautilus.io/s/T9SD8xn2pCHHCKG).
 
 ## Self-supervised training
 
